@@ -1,11 +1,12 @@
 .App {
   text-align: center;
+  width: 50%;
+  margin: 0 auto;
+  height: 100vh;
+  outline: 1px solid black;
 }
 
 .p {
   font-size: 1rem;
-}
-
-.h1 {
-  color: red
+  margin: 0;
 }

@@ -1,13 +1,12 @@
-import P from "./components/p.js";
-import H from "./components/h";
 import "./App.css";
+import H from "./components/h.js";
+import P from "./components/p.js";
 
-function App() {
+const App = () => (
   <div className="App">
-    <P name="Mario" />
     <H />
-    <H />
-  </div>;
-}
+    <P />
+  </div>
+);
 
 export default App;
