@@ -4,7 +4,7 @@ import "./App.css";
 
 function App() {
   <div className="App">
-    <P name="Mario" onClick={this.onClick} />
+    <P name="Mario" />
     <H />
     <H />
   </div>;
