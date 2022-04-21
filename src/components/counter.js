@@ -1,18 +1,31 @@
-import React from 'react';
+import React from "react";
 
-export default function Counter() {
-  let count = 0;
+let count = 0;
 
-  const plus = () => {
-    
+export default class Counter extends React.Component {
+  plus() {
+    count++;
+    document.querySelector(".count").innerHTML = "The count is: " + count;
   }
 
-  return (
-    <div>
-      <h1>This is my counter</h1>
-      <p>The count is {count}</p>
-      <button onClick={plus}>+</button>
-      <button onClick={minus}>-</button>
-    </div>
-  )
+  minus() {
+    count--;
+    document.querySelector(".count").innerHTML = "The count is: " + count;
+  }
+
+  render() {
+    return (
+      <div>
+        <h1>This is my counter</h1>
+        <h5>{this.props.header}</h5>
+        <p className="count">The count is: 0</p>
+        <button onClick={this.plus} className="plus">
+          +
+        </button>
+        <button onClick={this.minus} className="minus">
+          -
+        </button>
+      </div>
+    );
+  }
 }
