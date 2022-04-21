@@ -1,20 +1,18 @@
-import React, { Component } from 'react';
+import React, { Component } from "react";
+import P from "./p.js";
 
-class H extends Component {
-  handleClick() {
-    const para = document.querySelector('.p');
-    para.style.fontSize = (1 + 0.1) + "rem" ;
-
-    console.log(para.style.fontSize);
+export default class H extends Component {
+  handleClick(){
+    document.querySelector('.p').style.color = "red";
+    console.log("Clicked")
   }
-
   render() {
+
     return (
       <React.Fragment>
-        <h1 className='h1' onClick={this.handleClick}>this is an h1</h1>
+        <P onClick={this.handleClick}/>
+        <h1 className="h1">This is an h1</h1>
       </React.Fragment>
-    )
+    );
   }
 }
-
-export default H;

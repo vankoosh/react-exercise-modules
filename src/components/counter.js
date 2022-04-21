@@ -15,7 +15,7 @@ export default class Counter extends React.Component {
 
   render() {
     return (
-      <div>
+      <div className="counter">
         <h1>This is my counter</h1>
         <h5>{this.props.header}</h5>
         <p className="count">The count is: 0</p>

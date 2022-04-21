@@ -7,7 +7,6 @@ import Counter from "./components/counter.js";
 const App = () => (
   <div className="App">
     <H />
-    <P />
     <Counter />
   </div>
 );
