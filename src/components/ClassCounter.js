@@ -27,7 +27,7 @@ export default class Counter extends React.Component {
   render() {
     return (
       <div className="counter">
-        <h1>This is my CLASS counter</h1>
+        <h1>This is my CLASS counter. It belongs to {this.props.header}</h1>
         <p className="count">The count is: {this.state.count}</p>
         <button onClick={this.increment} className="plus">
           +
