@@ -1,14 +1,34 @@
+import React from 'react';
 import "./App.css";
-import H from "./components/h.js";
-import P from "./components/p.js";
-import Counter from "./components/FuncCounter.js";
+import Mount from "./components/Mount.js";
 
-const App = () => (
-  <div className="App">
-    <H />
-    <P />
-    <Counter header="Mario" />
-  </div>
-);
+export default class App extends React.Component {
+  constructor(props) {
+    console.log("Constructor for App.js");
+    super(props);
+    this.state = {
+      mount: true,
+    }
+  }
+  
+  mount = () => {
+    console.log("Mounted");
+    this.setState({ mount: true })
+  };
 
-export default App;
+  unmount = () => {
+    console.log("Unmounted");
+    this.setState({ mount: false })
+  };
+
+  render() {
+    return (
+      <div className="App">
+        <button onClick={() => {this.mount()}} disabled={this.state.mount}>MOUNT</button>
+        <button onClick={() => {this.unmount()}} disabled={!this.state.mount}>UNMOUNT</button>
+        {this.state.mount ? <Mount /> : null}
+      </div>
+    );
+  }
+}
+

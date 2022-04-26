@@ -11,9 +11,7 @@ export default class Counter extends React.Component {
   }
 
   increment = () => {
-    //callback function to handle event
     this.setState({
-      //setState setter method
       count: this.state.count + 1, //what to update, count in this case
     });
   };
