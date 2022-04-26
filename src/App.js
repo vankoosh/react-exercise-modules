@@ -1,7 +1,7 @@
 import "./App.css";
 import H from "./components/h.js";
 import P from "./components/p.js";
-import Counter from "./components/ClassCounter.js";
+import Counter from "./components/FuncCounter.js";
 
 const App = () => (
   <div className="App">
