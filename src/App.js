@@ -1,11 +1,11 @@
-import React from 'react';
+import React from "react";
 import "./App.css";
-import DatePrettifier from "./components/DatePrettifier.jsx";
+import Clock from "./components/PrettyClock.jsx";
 
 export default function App() {
-  return(
+  return (
     <>
-      <DatePrettifier />
+      <Clock />
     </>
-  )
-};
+  );
+}
