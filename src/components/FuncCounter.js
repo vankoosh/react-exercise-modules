@@ -1,14 +1,14 @@
 import React, { useState } from "react";
 
 export default function Counter(props) {
-  const [count, setCount] = useState(0);
+  const [count, setCount] = useState(() => {return 15}); // this way the initial computation wont rerender every time
 
-  const increment = () => {
-    setCount(count + 1);
+  function increment() {
+    setCount((prevCount) => prevCount + 1);
   };
 
-  const decrement = () => {
-    setCount(count - 1);
+  function decrement() {
+    setCount((prevCount) => prevCount - 1);
   };
 
   return (
