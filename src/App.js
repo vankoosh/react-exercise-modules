@@ -1,11 +1,11 @@
 import React from "react";
 import "./App.css";
-import Counter from "./components/ClassCounter";
+import Test from "./components/ColorPicker";
 
 export default function App() {
   return (
-    <>
-      <Counter />
-    </>
+    <div>
+      <Test choice="fruit" />
+    </div>
   );
 }
