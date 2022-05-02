@@ -3,7 +3,7 @@ import React from "react";
 export default class Counter extends React.Component {
   constructor(props) {
     super(props);
-
+    console.log(props);
     this.state = {
       //set initial state at load / reload
       count: 0, // it has to be am object {}, with key:value pairs

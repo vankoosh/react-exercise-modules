@@ -1,11 +1,11 @@
 import React from "react";
 import "./App.css";
-import Clock from "./components/PrettyClock.jsx";
+import Counter from "./components/ClassCounter";
 
 export default function App() {
   return (
     <>
-      <Clock />
+      <Counter />
     </>
   );
 }
