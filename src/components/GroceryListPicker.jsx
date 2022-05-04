@@ -67,6 +67,7 @@ export default function GroceryCart() {
 
   const removeItem = (targetIndex) => {
     setCart((prev) => {
+      console.log(prev);
       return prev.filter((item, index) => index !== targetIndex);
     });
   };
@@ -88,3 +89,5 @@ export default function GroceryCart() {
     </div>
   );
 }
+
+
