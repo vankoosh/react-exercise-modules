@@ -1,6 +1,6 @@
 import React from "react";
 import "./App.css";
-import Test from "./components/PickPizzaTopping.jsx";
+import Test from "./components/GroceryListPicker.jsx";
 
 export default function App() {
   return (

@@ -6,6 +6,7 @@ export default function PersonalPizza() {
   const [selected, setSelected] = useState([]);
 
   const toggleTopping = ({ target }) => {
+    console.log(target);
     const clickedTopping = target.value;
     setSelected((prev) => {
       // check if clicked topping is already selected
