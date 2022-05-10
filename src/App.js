@@ -1,11 +1,11 @@
 import React from "react";
 import "./App.css";
-import ThoughtApp from "./components/PassingThoughts.jsx";
+import Parent from "./components/NamePicker";
 
 export default function App() {
   return (
     <div>
-      <ThoughtApp />
+      <Parent />
     </div>
   );
 }
