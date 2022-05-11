@@ -1,11 +1,11 @@
 import React from "react";
 import "./App.css";
-import VideoPicker from "./components/VideoPicker";
+import Form from "./components/FormFiller";
 
 export default function App() {
   return (
     <div>
-      <VideoPicker />
+      <Form />
     </div>
   );
 }
