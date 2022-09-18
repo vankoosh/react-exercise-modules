@@ -55,7 +55,7 @@ const images = {
 
 class CopyCat extends React.Component {
   render() {
-    const { copying, toggleTape, handleChange, input, name } = this.props; //IN CASE YOU HAVE MANY PROPS, PUT THEM TOGETHER AND DECONSTRUC THEM
+    const { copying, toggleTape, handleChange, input, name } = this.props; //IN CASE YOU HAVE MANY PROPS, PUT THEM TOGETHER AND DECONSTRUCT THEM
     return (
       <div style={styles.divStyles}>
         <h1 style={{ marginBottom: 80 }}>Copy Cat {name || "Tom"}</h1>
