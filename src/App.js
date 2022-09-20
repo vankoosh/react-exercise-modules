@@ -1,11 +1,11 @@
 import React from "react";
 import "./App.css";
-import Form from "./components/FormFiller";
+import TodoList from "./components/TodoList";
 
 export default function App() {
   return (
     <div>
-      <Form />
+      <TodoList />
     </div>
   );
 }
