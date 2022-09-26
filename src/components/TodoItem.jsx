@@ -1,5 +1,6 @@
 import React from "react";
 
+// function to be trigered on this one item component
 function getClassName(selected) {
   if (selected) {
     return "TodoItemContainer selected";
