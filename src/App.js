@@ -1,12 +1,11 @@
 import React from "react";
 import "./App.css";
-import VideoPicker from "./components/VideoPicker/VideoPicker";
+import CatForm from "./components/CatForm/CatForm";
 
 export default function App() {
   return (
     <div>
-      <p>Hello</p>
-      <VideoPicker />
+      <CatForm />
     </div>
   );
 }
