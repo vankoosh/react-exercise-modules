@@ -22,10 +22,12 @@ import React from "react";
 //   }
 // }
 
-const Menu = ({ props }) => {
+const Menu = (props) => {
+// TODO repair error - linking to props in videopicker component is not working
   function handleClick(e) {
+    console.log(props)
     const text = e.target.value;
-    this.props.chooseVideo(text);
+    props.chooseVideo(text);
   }
 
   return (
