@@ -1,18 +1,35 @@
 import React from "react";
 
-export default class Menu extends React.Component {
-  constructor(props) {
-    super(props);
-    this.handleClick = this.handleClick.bind(this);
-  }
+// export default class Menu extends React.Component {
+//   constructor(props) {
+//     super(props);
+//     this.handleClick = this.handleClick.bind(this);
+//   }
 
-  handleClick(e) {
+//   handleClick(e) {
+//     const text = e.target.value;
+//     this.props.chooseVideo(text);
+//   }
+//   render() {
+//     return (
+//       <form onClick={this.handleClick}>
+//         <input type="radio" name="src" value="fast" /> fast
+//         <input type="radio" name="src" value="slow" /> slow
+//         <input type="radio" name="src" value="cute" /> cute
+//         <input type="radio" name="src" value="eek" /> eek
+//       </form>
+//     );
+//   }
+// }
+
+const Menu = ({ props }) => {
+  function handleClick(e) {
     const text = e.target.value;
     this.props.chooseVideo(text);
   }
-  render() {
-    return (
-      <form onClick={this.handleClick}>
+
+  return (
+      <form onClick={handleClick}>
         <input type="radio" name="src" value="fast" /> fast
         <input type="radio" name="src" value="slow" /> slow
         <input type="radio" name="src" value="cute" /> cute
@@ -20,4 +37,6 @@ export default class Menu extends React.Component {
       </form>
     );
   }
-}
+;
+
+export default Menu;
