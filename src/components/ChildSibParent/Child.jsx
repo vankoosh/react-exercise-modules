@@ -1,8 +1,6 @@
-import React from "react";
+import React from 'react';
 
-
-
-class Child extends React.Component {
+export default class Child extends React.Component {
   constructor(props) {
     super(props);
 
@@ -17,37 +15,12 @@ class Child extends React.Component {
   render() {
     return (
       <div>
-        <h1>Hey my name is {this.props.name}!</h1>
         <select id="great-names" onChange={this.handleChange}>
           <option value="Frarthur">Frarthur</option>
-
           <option value="Gromulus">Gromulus</option>
-
           <option value="Thinkpiece">Thinkpiece</option>
         </select>
       </div>
     );
   }
 }
-
-
-export default class Parent extends React.Component {
-  constructor(props) {
-    super(props);
-
-    this.state = { name: "Frarthur" };
-
-    this.changeName = this.changeName.bind(this);
-  }
-
-  changeName(newName) {
-    this.setState({
-      name: newName,
-    });
-  }
-
-  render() {
-    return <Child name={this.state.name} onChange={this.changeName} />;
-  }
-}
-
