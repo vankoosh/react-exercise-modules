@@ -1,1 +1,1 @@
-Reract exercise modules I created and used during my studies
+React exercise modules I created and used during my studies
