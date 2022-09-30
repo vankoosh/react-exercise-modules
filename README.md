@@ -1,1 +1,1 @@
-My first react app as a place to fool around and practice React
+Reract exercise modules I created and used during my studies
