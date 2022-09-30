@@ -1,12 +1,12 @@
 import React from "react";
 import "./App.css";
-// import TodoList from "./components/TodoList";
+import VideoPicker from "./components/VideoPicker/VideoPicker";
 
 export default function App() {
   return (
     <div>
       <p>Hello</p>
-      {/* <TodoList /> */}
+      <VideoPicker />
     </div>
   );
 }
