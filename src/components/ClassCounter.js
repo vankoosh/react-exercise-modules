@@ -37,3 +37,5 @@ export default class Counter extends React.Component {
     );
   }
 }
+
+// HACKclass counter with useState

@@ -5,7 +5,6 @@ export default class H extends Component {
   handleClick(){
     document.querySelector('.p').style.color = "yellow";
     document.querySelector('.p').style.fontSize = "2rem";
-    console.log("Clicked")
   }
   render() {
 

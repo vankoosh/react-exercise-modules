@@ -1,11 +1,11 @@
 import React from "react";
 import "./App.css";
-import CatForm from "./components/CatForm/CatForm";
+import X from "./components/h";
 
 export default function App() {
   return (
     <div>
-      <CatForm />
+      <X />
     </div>
   );
 }

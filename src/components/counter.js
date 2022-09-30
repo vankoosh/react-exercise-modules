@@ -30,3 +30,5 @@ export default class Counter extends React.Component {
     );
   }
 }
+
+// HACKbasic class counter component
