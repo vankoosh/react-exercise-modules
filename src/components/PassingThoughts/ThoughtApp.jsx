@@ -2,6 +2,7 @@
 import React, { useState } from "react";
 import Thought from './Thought';
 import AddThoughtForm from './AddThoughtForm';
+// hello
 
 // UTILITIES FUNCTIONS
 function getNewExpirationTime() {
