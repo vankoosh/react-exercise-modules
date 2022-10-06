@@ -1,17 +1,17 @@
 import React, {useEffect} from 'react';
 
-export default function Thought(props) {
-  const { thought, removeThought } = props;
+export default function Thought({props}) {
+  // const { thought, removeThought } = props;
 
   useEffect(() => {
-    const timeRemaining = thought.expiresAt - Date.now();
+    const timeRemaining = props.thought.expiresAt - Date.now();
     setTimeout(() => {
-      removeThought(thought.id);
+      props.removeThought(props.thought.id);
     }, timeRemaining);
   }, [props.thought]);
 
   const handleRemoveClick = () => {
-    removeThought(thought.id);
+    props.removeThought(props.thought.id);
   };
 
   return (
@@ -23,7 +23,7 @@ export default function Thought(props) {
       >
         &times;
       </button>
-      <div className="text">{thought.text}</div>
+      <div className="text">{props.thought.text}</div>
     </li>
   );
 }
