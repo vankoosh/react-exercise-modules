@@ -1,28 +1,27 @@
-import React, {useEffect, useState} from 'react'
+import { useEffect, useState } from "react";
 
 export default function GithubUsers() {
-  const url = "https://api.github.com/users";
+  const url = "https://api.github.com/users/vankoosh/repos";
 
-  const get = async() => {
-    const res = await fetch(url)
-    const json = await res.json()
-    console.log(json);
+  async function get() {
+    const res = await fetch(url);
+    const json = await res.json();
     setUsers(json);
-  }
-  
-  const [users, setUsers] = useState([])
+  };
+
+  const [users, setUsers] = useState([]);
 
   useEffect(() => {
-    document.title = "GithubUsers"
-    get();    
-  },[])
+    document.title = "Github Users";
+    get();
+  }, []);
 
   return (
     <>
       {/* <button onClick={get}>GET</button> */}
       {users.map((user) => {
-        return <p>{ user}</p>
+        return <p key={crypto.randomUUID()}>{user.name} is a repo about -- {user.description}</p>;
       })}
     </>
-)
+  );
 }
