@@ -1,22 +1,16 @@
-import React from "react";
+import { useState,useEffect } from "react";
 
-export default class Clock extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = { date: new Date() };
-  }
-
-  render() {
-    return (
-      <div>
-        <p>{this.state.date.toLocaleTimeString()}</p>
-      </div>
-    );
-  }
-
-  componentDidMount() {
+export default function PrettyClock() {
+  const [date, setdate] = useState({date: new Date()})
+  useEffect(()=>{
     setInterval(() => {
-      this.setState({ date: new Date() });
-    }, 1000);
-  }
+      setdate({ date: new Date() });
+    }, 1000)
+  },[])
+
+  return (
+      <div>
+        <p>{date.date.toLocaleTimeString()}</p>
+      </div>
+    )
 }
