@@ -35,7 +35,7 @@ const VIDEOS = {
 //   }
 // }
 
-const VideoPicker = () => {
+export default function VideoPicker() {
   const [video, setVideo] = useState({ src: VIDEOS.fast });
 
   function chooseVideo(newVideo) {
@@ -52,5 +52,3 @@ const VideoPicker = () => {
     </div>
   );
 }
-
-export default VideoPicker;
