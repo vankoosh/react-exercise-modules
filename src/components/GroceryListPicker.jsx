@@ -1,15 +1,11 @@
-// HACKmulti option picker grocery list useState
-import React, { useState } from "react";
+import { useState } from "react";
 
 function ItemList({ items, onItemClick }) {
-  const handleClick = ({ target }) => {
-    const item = target.value;
-    onItemClick(item);
-  };
+  
   return (
     <div>
       {items.map((item, index) => (
-        <button value={item} onClick={handleClick} key={index}>
+        <button value={item} onClick={(e)=>{onItemClick(e.target.value)}} key={index}>
           {item}
         </button>
       ))}
@@ -57,7 +53,7 @@ const pantryItems = [
 ];
 
 
-export default function GroceryCart() {
+export default function GroceryListPicker() {
   const [cart, setCart] = useState([]);
 
   const addItem = (item) => {
@@ -68,7 +64,6 @@ export default function GroceryCart() {
 
   const removeItem = (targetIndex) => {
     setCart((prev) => {
-      console.log(prev);
       return prev.filter((item, index) => index !== targetIndex);
     });
   };
@@ -78,7 +73,7 @@ export default function GroceryCart() {
       <h1>Grocery Cart</h1>
       <ul>
         {cart.map((item, index) => (
-          <li onClick={() => removeItem(index)} key={index}>
+          <li onClick={() => removeItem(index)} key={crypto.randomUUID()}>
             {item}
           </li>
         ))}
