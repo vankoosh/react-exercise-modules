@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 
-export default function Counter(props) {
+export default function Counter() {
   const [count, setCount] = useState(() => {return 15}); // this way the initial computation wont rerender every time
 
   function increment() {
@@ -13,7 +13,7 @@ export default function Counter(props) {
 
   return (
     <div className="counter">
-      <h1>This is my FUNC counter. It belongs to {props.header}</h1>
+      <h1>This is my FUNC counter. It belongs to...</h1>
       <p className="count">The count is: {count}</p>
       <button onClick={increment} className="plus">
         +

@@ -6,28 +6,25 @@ export default function PickPizzaTopping() {
   const [selected, setSelected] = useState([]);
 
   const toggleTopping = ({ target }) => {
-    console.log(target);
-    const clickedTopping = target.value;
     setSelected((prev) => {
-      // check if clicked topping is already selected
-      if (prev.includes(clickedTopping)) {
-        // filter the clicked topping out of state
-        return prev.filter((t) => t !== clickedTopping);
+      if (prev.includes(target.value)) {
+        return prev.filter((t) => t !== target.value);
       } else {
-        // add the clicked topping to our state
-        return [clickedTopping, ...prev];
+        return [target.value, ...prev];
       }
     });
   };
 
   return (
     <div>
+
       {options.map((option) => (
         <button value={option} onClick={toggleTopping} key={option}>
           {selected.includes(option) ? "Remove " : "Add "}
           {option}
         </button>
       ))}
+
       <p>Order a {selected.join(", ")} pizza</p>
     </div>
   );
